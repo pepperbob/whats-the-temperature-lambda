@@ -44,9 +44,16 @@ describe("Inverter Events", () => {
         let state = {}
         for(x of Array(10).keys()) {
             state = reduce(state, { device: "inverter", power_dc1: x, power_dc2: x})
-            console.log(state)
         }
 
         expect(state.avg5).toEqual([6,8,10,12,14])
     })
+})
+
+describe("Resets", () => {
+
+    test("State can be reset", () => {
+        expect(reduce({test: "abc"}, {device: "reset"})).toEqual({})
+    })
+
 })

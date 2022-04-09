@@ -14,6 +14,8 @@ const reduce = (state = {}, event) => {
             avg5.append(dc5.avg())
 
             return { ...state, dc_roof: dcRoof, dc5: dc5.items, avg5: avg5.items }
+        case "reset":
+            return {}
         default:
             return state
     }

@@ -6,7 +6,8 @@
   "scripts": {
     "prebuild": "rimraf iot-stats-lambda.zip",
     "build": "jest && npm-pack-zip",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "",
   "license": "ISC",

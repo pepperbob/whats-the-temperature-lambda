@@ -18,7 +18,7 @@ jest.mock('aws-sdk', () => ({
 
 describe("AWS Lamdba Calls", () => {
     test("Returns what is returned by PutObject", async () => {
-        const result = await index.handler({ "device": "inverter" }) 
-        expect(result).toEqual({dc_roof: null})
+        const result = await index.handler({ "device": "inverter", power_dc1: 1, power_dc2: 1 }) 
+        expect(result).toEqual({dc_roof: 2, dc5: [2], avg5: [2]})
     })
 })

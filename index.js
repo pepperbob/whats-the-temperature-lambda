@@ -18,7 +18,7 @@ const setState = (newState) =>
 
 exports.handler = async (event) => {
     return await getState()
-        .then(state => reducer(event, state))
+        .then(state => reducer(state, event))
         .then(state => setState(state))
         .then(res => res);
 };

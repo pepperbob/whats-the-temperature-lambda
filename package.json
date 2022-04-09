@@ -12,7 +12,8 @@
   "license": "ISC",
   "files": [
     "index.js",
-    "reduce-fns.js"
+    "reduce-fns.js",
+    "list-util.js"
   ],
   "peerDependencies": {
     "aws-sdk": "^2.1110.0"
